@@ -58,5 +58,9 @@ router.put('/update-password',(req,res)=>{
     });
 });
 
+router.get('/profile', (req,res)=>{
+  return res.render('main/profile')
+})
+
 
 module.exports = router;
