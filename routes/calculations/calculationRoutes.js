@@ -14,7 +14,7 @@ router.get('/track', (req,res)=>{
     })
 
 router.get('/bmi', (req,res)=>{
-        return res.render('main/bmi')
+        return res.render('main/bmi', {bmi:null})
 })
 // router.get('/bmi', (req,res,next)=>{
 //         Bmi.find({})

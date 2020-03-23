@@ -34,6 +34,9 @@ router.get('/blog', (req,res)=>{
 router.get('/contacts', (req,res)=>{
     return res.render('main/contacts')
 })
+router.get('/signup', (req,res)=>{
+    return res.render('main/signup')
+})
 
 
 module.exports= router
