@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Project for Colin</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <%- include ../partials/head %>
     </head>
     <body>
         <h1>thank you for logging in</h1>
@@ -21,14 +19,32 @@
         <% } %> <% if (bmi>25 && bmi<30) { %>
         <p>overweight</p>
         <% } %> <% if (bmi>30 && bmi<40) { %>
-        <p> obese </p>
+        <h3> obese </h3>
+        <p>
+            <h4>Health consequences of a high BMI?</h4>
+                When it comes to the amount of body fat you carry, the stakes are high. Obesity and high levels of body fat carry a variety of health consequences, and can affect your overall health and quality of life. They include:
+                <ul>
+                <li>High blood pressure</li>
+                <li>High cholesterol levels</li>
+                <li>Diabetes</li>
+                <li>Heart disease</li>
+                <li>Stroke</li>
+                <li>Gallbladder disease</li>
+                <li>Osteoarthritis</li>
+                <li>Sleep apnea</li>
+                <li>Chronic inflammation and pain</li>
+                <li>Certain types of cancer</li>
+                <li>Mental disorders such as anxiety and depression</li>
+                <li>Increased risk of death</li>
+</ul>
+        </p>
         <% } %> <% if (bmi>40 ) { %>
         <p>Extreme obesity</p>
         <% } %>
-    
-    
+
         <a href="/auth/track">track your calories?</a>
         <a href=""> track your exercise?</a>
         </form>
+        <%- include ../partials/script %>
     </body>
 </html>
