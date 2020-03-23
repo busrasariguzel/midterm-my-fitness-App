@@ -14,10 +14,19 @@
         <button type="submit">Calculate my BMI</button>
         </form>
         <p>YOUR BMI IS: <%= bmi %> </p>
-        <% if (bmi<18) { %>
-         
+        <% if (bmi<18.5) { %>
+        <p>underweight</p>
+        <% } %> <% if (bmi>18.5 && bmi<24.9) { %>
+        <p>healthy</p>
+        <% } %> <% if (bmi>25 && bmi<30) { %>
+        <p>overweight</p>
+        <% } %> <% if (bmi>30 && bmi<40) { %>
+        <p> obese </p>
+        <% } %> <% if (bmi>40 ) { %>
+        <p>Extreme obesity</p>
         <% } %>
-         
+    
+    
         <a href="/auth/track">track your calories?</a>
         <a href=""> track your exercise?</a>
         </form>
