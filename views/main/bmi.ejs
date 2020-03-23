@@ -9,11 +9,15 @@
         <h1>thank you for logging in</h1>
         <h1>calculate your BMI</h1>
         <form role="form" method="POST" action="/auth/bmi">
-        <input  placeholder="weight" type='text' id="weight" name="weight"><br>
-        <input   placeholder="height" type='text' id="height" name="height"><br>
+        <input  placeholder="please enter your weight lbs" type='text' id="weight" name="weight"><br>
+        <input   placeholder="please enter your height in ft" type='text' id="height" name="height"><br>
         <button type="submit">Calculate my BMI</button>
         </form>
         <p>YOUR BMI IS: <%= bmi %> </p>
+        <% if (bmi<18) { %>
+         
+        <% } %>
+         
         <a href="/auth/track">track your calories?</a>
         <a href=""> track your exercise?</a>
         </form>

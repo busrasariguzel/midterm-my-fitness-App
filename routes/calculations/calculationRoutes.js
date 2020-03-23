@@ -15,13 +15,14 @@ router.get('/bmi', (req,res)=>{
 
 router.post('/bmi', (req,res,next)=>{
     newBmi = new Bmi();
-    newBmi.height = req.body.height;
+    newBmi.height = req.body.height*12;
     newBmi.weight = req.body.weight;
     newBmi.save();
 
-const bmi = ((req.body.weight/(req.body.height*req.body.height))* 703).toFixed(2)
+const bmi = Number(((newBmi.weight*703)/(newBmi.height*newBmi.height)).toFixed(2))
 console.log(bmi)
-
+console.log(newBmi.weight)
+console.log(newBmi.height)
 
 return res.render('main/bmi', {bmi})
 }
