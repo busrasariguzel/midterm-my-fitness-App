@@ -17,19 +17,18 @@
         <p>YOUR BMI IS: <%= bmi %> </p>
         <% if (bmi<18.5) { %>
         <h2 style=color:red;>underweight</h2>
-        <p>
+        
                 <h4>Health consequences of a high BMI?</h4>
-                There’s a lot of focus in the medical world on the health effects of being overweight, but what about the effects of being underweight? There are certain health risks associated with being underweight or having poor nutrition.
-
+              <p> There’s a lot of focus in the medical world on the health effects of being overweight, but what about the effects of being underweight? There are certain health risks associated with being underweight or having poor nutrition.
                 These risks include:
-                
-                malnutrition, vitamin deficiencies, or anemia
-                osteoporosis from too little vitamin D and calcium
-                decreased immune function
-                increased risk for complications from surgery
-                fertility issues caused by irregular menstrual cycles
-                growth and development issues, especially in children and teenagers 
-        </p>
+                <ul>
+                <li>malnutrition, vitamin deficiencies, or anemia</
+                <li>osteoporosis from too little vitamin D and calcium</
+                <li>decreased immune function</
+                <li>increased risk for complications from surgery</
+                <li>growth and development issues, especially in children and teenagers </
+                </ul>
+            </p>
         <% } %> <% if (bmi>18.5 && bmi<24.9) { %>
         <h2 style=color:blue;>healthy</h2>
         <% } %> <% if (bmi>25 && bmi<30) { %>
@@ -56,7 +55,7 @@
             </p>
         <% } %> <% if (bmi>40 ) { %>
         <p>Extreme obesity</p>
-        <% } %>
+        <% } %> 
 
         <a href="/auth/track">track your calories?</a>
         <a href=""> track your exercise?</a>

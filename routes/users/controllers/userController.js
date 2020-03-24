@@ -103,7 +103,7 @@ module.exports = {
         return res.render('main/login')
       },
       registerGet : (req,res)=>{
-        return res.render('main/signup')
+        return res.render('main/signUp')
       },
     //   mainGet: (req,res)=>{
     //     return res.render('main/welcome')

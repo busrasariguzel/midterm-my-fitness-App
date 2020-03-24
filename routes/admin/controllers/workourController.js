@@ -20,15 +20,16 @@ addWorkout:(req,res,next)=>{
             for(let i=0; i<24 ;  i++){
                 const workout = new workout()
                 workout.name=faker.commerce.workoutName()
-                workout.price =faker.commerce.price();
-                workout.image=`/images/workouts2/${i}.jpg`
+                workout.duration= '30 mins'
+                workout.image=``
                 workout.description = faker.lorem.paragraph();
                 workout.save();
             }
         }
     ])
-    req.flash('message', 'Category created')
-    return res.redirect('/workout');
+    req.flash('message', 'Workout created')
+    return res.redirect('/auth/track');
 },
 
 }
+module.exports=router;

@@ -24,7 +24,7 @@ router.post('/login',
   failureFlash:true
 }))
 
-router.get('/register', registerGet);
+router.get('/signup', registerGet);
 
 router.get('/getUsers', getUsers);
 
