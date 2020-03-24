@@ -4,6 +4,9 @@
             <%- include ../partials/head %>
     </head>
     <body>
+           <header>
+                <%- include ../partials/header %>
+           </header>
         <h1>thank you for logging in</h1>
         <h1>calculate your BMI</h1>
         <form role="form" method="POST" action="/auth/bmi">
@@ -13,16 +16,29 @@
         </form>
         <p>YOUR BMI IS: <%= bmi %> </p>
         <% if (bmi<18.5) { %>
-        <p>underweight</p>
-        <% } %> <% if (bmi>18.5 && bmi<24.9) { %>
-        <p>healthy</p>
-        <% } %> <% if (bmi>25 && bmi<30) { %>
-        <p>overweight</p>
-        <% } %> <% if (bmi>30 && bmi<40) { %>
-        <h3> obese </h3>
+        <h2 style=color:red;>underweight</h2>
         <p>
+                <h4>Health consequences of a high BMI?</h4>
+                There’s a lot of focus in the medical world on the health effects of being overweight, but what about the effects of being underweight? There are certain health risks associated with being underweight or having poor nutrition.
+
+                These risks include:
+                
+                malnutrition, vitamin deficiencies, or anemia
+                osteoporosis from too little vitamin D and calcium
+                decreased immune function
+                increased risk for complications from surgery
+                fertility issues caused by irregular menstrual cycles
+                growth and development issues, especially in children and teenagers 
+        </p>
+        <% } %> <% if (bmi>18.5 && bmi<24.9) { %>
+        <h2 style=color:blue;>healthy</h2>
+        <% } %> <% if (bmi>25 && bmi<30) { %>
+        <h2 style=color:red;>overweight</h2>
+        <% } %> <% if (bmi>30 && bmi<40) { %>
+        <h2 style=color:red;> obese </h2>
+        
             <h4>Health consequences of a high BMI?</h4>
-                When it comes to the amount of body fat you carry, the stakes are high. Obesity and high levels of body fat carry a variety of health consequences, and can affect your overall health and quality of life. They include:
+            <p>   When it comes to the amount of body fat you carry, the stakes are high. Obesity and high levels of body fat carry a variety of health consequences, and can affect your overall health and quality of life. They include:
                 <ul>
                 <li>High blood pressure</li>
                 <li>High cholesterol levels</li>
@@ -36,8 +52,8 @@
                 <li>Certain types of cancer</li>
                 <li>Mental disorders such as anxiety and depression</li>
                 <li>Increased risk of death</li>
-</ul>
-        </p>
+                </ul>
+            </p>
         <% } %> <% if (bmi>40 ) { %>
         <p>Extreme obesity</p>
         <% } %>
@@ -45,6 +61,7 @@
         <a href="/auth/track">track your calories?</a>
         <a href=""> track your exercise?</a>
         </form>
+        <%- include ../partials/footer %>
         <%- include ../partials/script %>
     </body>
 </html>
