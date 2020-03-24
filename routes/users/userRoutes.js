@@ -29,7 +29,7 @@ router.get('/register', registerGet);
 router.get('/getUsers', getUsers);
 
 
-router.post('/register',userValidation, register);
+router.post('/signup', userValidation, register);
 
 
 router.put('/update-profile', (req,res)=>{
