@@ -6,7 +6,7 @@ const {addWorkout
     } = require('./controllers/workoutController')
 
 
-    router.get('/track')
+
     // router.post('/track', addWorkout)
 
     router.get('/workout', (req,res)=>{
@@ -16,26 +16,22 @@ const {addWorkout
 router.post('/workout', (req,res,next)=>{
     
     const newWorkout = new Workout();
-    newWorkout.name = faker.lorem.words()
+    newWorkout.name = faker.lorem.words();
     newWorkout.duration = '30 mins'
-    newWorkout.image = faker.image.sports();
-    newWorkout.description = faker.lorem.paragraph()
+    newWorkout.image.picture = faker.image.sports();
+    newWorkout.description = faker.lorem.paragraph();
 
     newWorkout.save().then(workout => {
-        console.log(workout)
-        return res.render('main/track', {workout})
+        
+        return res.status(200).json({message: 'Workout Added', workout: workout});
     }).catch(err=>{
         
-        return res.status(400).json({message:'error'})
+        return res.status(400).json({message:'error', err})
 
-    })
+    
+});
     }
 
 );
-
-
-
-
-
 
 module.exports=router;
