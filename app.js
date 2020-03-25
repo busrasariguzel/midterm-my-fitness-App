@@ -15,7 +15,7 @@ const app = express();
 const usersRouter = require('./routes/users/userRoutes');
 const calculationRouter = require('./routes/calculations/calculationRoutes');
 const indexRouter = require('./routes/index/indexRoutes');
-
+const workoutRouter = require('./routes/admin/workoutRoutes')
 
 require('./lib/passport')
 require('dotenv').config()
@@ -78,7 +78,7 @@ app.use((req, res, next)=>{
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', calculationRouter)
-
+app.use('/track' , workoutRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

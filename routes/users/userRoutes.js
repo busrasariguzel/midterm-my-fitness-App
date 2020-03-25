@@ -24,12 +24,12 @@ router.post('/login',
   failureFlash:true
 }))
 
-router.get('/signup', registerGet);
+router.get('/register', registerGet);
 
 router.get('/getUsers', getUsers);
 
 
-router.post('/signup', userValidation, register);
+router.post('/register', userValidation, register);
 
 
 router.put('/update-profile', (req,res)=>{

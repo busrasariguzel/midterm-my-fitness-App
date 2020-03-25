@@ -20,9 +20,7 @@ router.post('/bmi', (req,res,next)=>{
     newBmi.save();
 
 const bmi = Number(((newBmi.weight*703)/(newBmi.height*newBmi.height)).toFixed(2))
-console.log(bmi)
-console.log(newBmi.weight)
-console.log(newBmi.height)
+
 
 return res.render('main/bmi', {bmi})
 }

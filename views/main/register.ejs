@@ -38,26 +38,26 @@
                             <h2>Register Now</h2>
                             <p>The First 7 Day Trial Is Completely Free With The Teacher</p>
                         </div>
-                        <form action="#" class="register-form">
+                        <form role="form" method="POST" action="/users/register" class="register-form"></form>
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <label for="name">First Name</label>
-                                    <input type="text" id="name">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name">
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="email">Your email address</label>
-                                    <input type="text" id="email">
+                                    <input type="text" id="email" name="email">
                                 </div>
                                 <div class="col-lg-6">
-                                    <label for="last-name">Last Name</label>
-                                    <input type="text" id="last-name">
+                                    <label for="last-name">Password</label>
+                                    <input type="password" id="password" name="password">
                                 </div>
-                                <div class="col-lg-6">
+                                <!-- <div class="col-lg-6">
                                     <label for="mobile">Mobile No*</label>
                                     <input type="text" id="mobile">
-                                </div>
+                                </div> -->
                             </div>
-                            <button type="submit" class="register-btn">Get Started</button>
+                            <button type="submit" value="register" class="register-btn">Get Started</button>
                         </form>
                     </div>
                 </div>
