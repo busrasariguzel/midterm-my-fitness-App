@@ -33,12 +33,11 @@ router.post('/workout', (req,res,next)=>{
 
 );
 
-
 router.get('/single-workout/:id', (req,res,next)=> {
     Workout.findById({_id:req.params.id}, (err,workout)=>{
         if(err) return next(err)
-        // res.render('main/single-workout', {workout})
-        return res.status(200).json({message: 'single workout viewed', workout})
+        return res.render('main/single-workout', {workout})
+        // return res.status(200).json({message: 'single workout viewed', workout})
     })
 })
 
