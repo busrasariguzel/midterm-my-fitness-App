@@ -10,7 +10,10 @@ const {addWorkout
     // router.post('/track', addWorkout)
 
     router.get('/workout', (req,res)=>{
-        return res.render('main/track', {workout:null})
+        Workout.find({}).then(workout =>{
+
+            return res.render('main/track',{ workout })
+        })
 })
 
 router.post('/workout', (req,res,next)=>{
@@ -21,10 +24,12 @@ router.post('/workout', (req,res,next)=>{
     newWorkout.image.picture = faker.image.sports();
     newWorkout.description = faker.lorem.paragraph();
     
-    newWorkout.save().then(workout => {
-        
+    newWorkout.save()
+.then(workout => {
+        console.log(workout)
         // return res.status(200).json({message: 'Workout Added', workout: workout});
-        return res.render('main/track', {workout:workout})
+        return res.redirect('/track/workout', {workout})
+        
     }).catch(err=>{
         
         return res.status(400).json({message:'error', err})

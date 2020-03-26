@@ -9,7 +9,10 @@
         <h3>Welcome to our fitness page.</h3>
 
         <% for( let i = 0; i < workout.length; i++ ) { %>
-        <h4><%= workout[i].image.picture %> </h4>
+            <p><%= workout[i].name %> </p>
+            <p><%= workout[i].duration %> </p>
+            <p><%= workout[i].description %> </p>
+            
         <% } %>
 
     
