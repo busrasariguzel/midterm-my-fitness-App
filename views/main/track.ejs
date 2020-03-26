@@ -7,7 +7,10 @@
     </head>
     <body>
         <h3>Welcome to our fitness page.</h3>
-<%= workout %> 
+
+        <% for( let i = 0; i < workout.length; i++ ) { %>
+        <h4><%= workout[i].image.picture %> </h4>
+        <% } %>
 
     
     </body>
