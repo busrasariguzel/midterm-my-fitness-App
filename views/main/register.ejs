@@ -29,30 +29,36 @@
                             <h2 class="text-center text-light">Login</h2>
                         </div>
                         <div class="card-body">
-                            <form class="needs-validation">
+                            <form role="form" method="POST" action="/users/register"class="needs-validation">
                                 <div class="input-group form-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class='fas fa-user-graduate ml-2' style='font-size:23px'></i></span>
-                                        <input type="text" class="form-control" placeholder="Email" id="tbEmail" required>
+                                        <input type="text" class="form-control" placeholder="Email" name="email" id="tbEmail" required>
                                     </div>         
                                 </div>
                                 <div class="input-group form-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class='fa fa-key ml-2' style='font-size:22px'></i></span>
-                                        <input type="password" class="form-control" placeholder="Password" id="tbSifre" required>
+                                        <input type="text" class="form-control" placeholder="Name" name="name" id="tbName" required>
                                     </div>   
                                 </div>
+                                <div class="input-group form-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class='fa fa-key ml-2' style='font-size:22px'></i></span>
+                                            <input type="password" class="form-control" name="password" placeholder="Password" id="tbSifre" required>
+                                        </div>   
+                                    </div>
                                 <div class="row align-items-center remember">
                                     <input type="checkbox">Remember me
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" value="Login" class="btn float-right login_btn text-light" id="btnGiris">    
+                                    <input type="submit" value="Sign Up" class="btn float-right login_btn text-light" id="btnGiris">    
                                 </div>
                             </form>
                         </div>
                         <div class="card-footer">
                             <div class="d-flex justify-content-center links">
-                            <button class="btn login_btn text-light" role="button" id="btnKayitOl" >Sign Up</button>
+                            <!-- <button class="btn login_btn text-light" role="button" id="btnKayitOl" >Sign Up</button> -->
                             </div>
                             <div class="d-flex justify-content-center links my-1">
                              <button class="btn login_btn text-light" role="button" id="btnSifreUnuttum" data-toggle="modal" data-target="#openModalID">
