@@ -22,12 +22,12 @@ router.post('/workout', (req,res,next)=>{
     newWorkout.name = faker.lorem.words();
     newWorkout.duration = '30 mins'
     newWorkout.image.picture = faker.image.sports();
-    newWorkout.description = faker.lorem.paragraph();
+    newWorkout.description = faker.lorem.lines();
     
     newWorkout.save()
 .then(workout => {
         console.log(workout)
-        // return res.status(200).json({message: 'Workout Added', workout: workout});
+        res.status(200).json({message: 'Workout Added', workout: workout});
         return res.redirect('/track/workout', {workout})
         
     }).catch(err=>{
@@ -35,7 +35,6 @@ router.post('/workout', (req,res,next)=>{
         return res.status(400).json({message:'error', err})
 });
     }
-
 );
 
 router.get('/single-workout/:id', (req,res,next)=> {
