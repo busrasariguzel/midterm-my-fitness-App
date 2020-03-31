@@ -8,9 +8,9 @@
     <body>
             <style>
                     body {
-                      background-image: url('/img/fitness.jpg');
-                      height: 100%;
-                      color:white;
+                    background-image: url('/img/fitness.jpg');
+                    height: 100%;
+                    color:white;
                     }
             </style>
         <h1> Track Your Calories </h1>
@@ -19,6 +19,7 @@
         
 
         <form role="form" method="POST" action="/calories">
+            
         <label>Breakfast:</label>
         <input type="text" name="breakfast"><br><br>
         <label>Lunch:</label>
@@ -29,26 +30,11 @@
         <input type="text" name="dinner"><br><br>
         <label>Burned:</label>
         <input type="text" name="burned"><br><br><br>
-        <label>Total:</label>
+        <label>Total:</label> <P> <%= calories.total %> </p>
         <input type="text" name="total">
         <button type="submit">Calculate</button>
-        <%= calories.total %> 
+
         </form>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        </form>
-
-
-
-
-
 
     </body>
 </html>
