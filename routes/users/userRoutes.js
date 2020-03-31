@@ -44,7 +44,7 @@ router.put('/update-profile', (req,res)=>{
 
 router.get('/update-profile', (req,res)=>{
     if(req.isAuthenticated()){
-    return res.render('auth/update-profile')
+    return res.render('main/updateProfile')
     }
     return res.redirect('/')
 });

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Project for Colin</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+            <form role="form" method="POST" action="/api/users/update-profile?_method=PUT">
+                <fieldset>
+                    <img src="<%= user.profile.picture %> " alt="profile"/>
+                    <div >
+                        <br>
+                        <label for="name" >Name:</label>
+                        <input 
+                        type="text" 
+                        name="name" 
+                        id="name" 
+                        
+                        value="<%= user.profile.name %> ">
+
+                    </div>
+                    <div>
+                            <br>
+                            <label for="email" >Email:</label>
+                            <input 
+                            type="text" 
+                            name="email" 
+                            id="email" 
+                            
+                            value="<%= user.email %> ">
+                        </div>
+                        <div >
+                                <br>
+                                <label for="address" >Address:</label>
+                                <input 
+                                type="text" 
+                                name="address" 
+                                id="address" 
+                                
+                                value="<%= user.address %> ">
+                            </div>
+                            <div >
+                                    <input
+                                    type="submit"
+                                    
+                                    value="Update Profile"
+                                    />
+                                </div>
+                                </form>
+            <fieldset>
+                
+                
+
+
+                    <h5>Change Password:</h5>
+                    <form 
+                    role="form"
+                    method="POST"
+                    action="/api/users/update-password?_method=PUT">
+                    <div >
+                            <br>
+                            <label for="oldPassword" >Old Password</label>
+                            <input 
+                            type="password" 
+                            name="oldPassword" 
+                            id="oldPassword" 
+                            placeholder="Old Password">
+                    </div>
+                    <div >
+                        <br>
+                        <label for="newPassword">New Password:</label>
+                        <input 
+                        type="password" 
+                        name="newPassword" 
+                        id="newPassword" 
+                        
+                        placeholder="New Password">
+                    </div>
+                    <div >
+                    <br>
+                        <label for="repeatNewPassword">Repeat New Password:</label>
+                        <input 
+                        type="password" 
+                        name="repeatNewPassword" 
+                        id="repeatNewPassword" 
+                        
+                        placeholder="Repeat New Password">
+                    </div>
+
+            </fieldset>
+            <div >
+                    <input
+                    type="submit"
+                    
+                    value="Update Password"
+                    />
+                </div>
+                </form>
+    </body>
+</html>

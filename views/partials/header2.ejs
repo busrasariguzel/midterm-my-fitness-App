@@ -5,19 +5,17 @@
                 }
         </style>
         <% if (!user) { %>
-                <a  href="users/register">Register</a>| <a href="/api/login">Login</a></span>
-     
-           
-           <% }else{ %>
-     <h3 >Hello <a  style="color:orange" href="/users/profile" >
-     <%= user.profile.name.toUpperCase() %>
-     </a>
-     </h3>
-         <a style="color:black"
-         href="/logout">logout</a>
-     </span>
-          <% } %>
-           
+        <a  href="users/register">Register</a>| <a href="/api/login">Login</a></span>
+    
+    
+    <% }else{ %>
+        <div>
+    <h3>Hi, <a  style="color:orange" href="/users/profile" >
+    <%= user.profile.name.toUpperCase() %></a></h3> 
+    <h3><a style="color:orange" href="/logout">logout</a></h3>
+    </div>
+    <% } %>
+    
 
 
 
