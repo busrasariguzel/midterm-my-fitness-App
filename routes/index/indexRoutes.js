@@ -38,5 +38,11 @@ router.get('/signup', (req,res)=>{
     return res.render('main/signup')
 })
 
+router.get('/logout', (req,res)=>{
+    req.logout()
+    // req.session.destroy()
+    return res.redirect('/');
+    })
+
 
 module.exports= router
