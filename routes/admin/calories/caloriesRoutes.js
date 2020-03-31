@@ -17,17 +17,19 @@ newCalories.lunch = req.body.lunch;
 newCalories.dinner = req.body.dinner;
 newCalories.snack = req.body.snack;
 newCalories.burned= req.body.burned;
-
+newCalories.total = Number(req.body.breakfast)+Number(req.body.lunch)+Number(req.body.dinner)+Number(req.body.snack)-Number(req.body.burned)
 newCalories.save()
+
+// const totalCalories = newCalories+newCalories.breakfast
 .then(calories => {
-    console.log(calories)
-    res.status(200).json({message: 'Calories Added', calories:calories});
-    return res.redirect('/calories', {calories})
+    
+    res.status(200).json();
+    return res.redirect('/calories', {calories:calories})
     
 }).catch(err=>{
     
     return res.status(400).json({message:'error', err})
-});
+})
 }
 );
 

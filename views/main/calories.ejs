@@ -6,7 +6,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <h1> Calories </h1>
-        <%= calories.breakfast %> 
+            <style>
+                    body {
+                      background-image: url('/img/fitness.jpg');
+                      height: 100%;
+                      color:white;
+                    }
+            </style>
+        <h1> Track Your Calories </h1>
+
+        <h4>By keeping track of your calories, you can easily manage your weight!</h4>
+        
+
+        <form role="form" method="POST" action="/calories">
+        <label>Breakfast:</label>
+        <input type="text" name="breakfast"><br><br>
+        <label>Lunch:</label>
+        <input type="text" name="lunch"><br><br>
+        <label>Snack:</label>
+        <input type="text" name="snack"><br><br>
+        <label>Dinner:</label>
+        <input type="text" name="dinner"><br><br>
+        <label>Burned:</label>
+        <input type="text" name="burned"><br><br><br>
+        <label>Total:</label>
+        <input type="text" name="total">
+        <button type="submit">Calculate</button>
+        <%= calories.total %> 
+        </form>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </form>
+
+
+
+
+
+
     </body>
 </html>
