@@ -7,8 +7,9 @@
     </head>
     <body>
         <h3>Welcome to our fitness page.</h3>
-
+<div id="workout">
         <% for( let i = 0; i < workout.length; i++ ) { %>
+            
             <p><%= workout[i].name %> </p>
             <p><%= workout[i].duration %> </p>
             <p><%= workout[i].description %> </p>
@@ -16,8 +17,9 @@
             style="height:140px; width: 160px"
             src="<%=workout[i].image.picture%>"
             />
+            <a href="/track/single-workout/<%=workout[i]._id%>">Checkout the workout!</a>
         <% } %>
 
-    
+</div>
     </body>
 </html>
