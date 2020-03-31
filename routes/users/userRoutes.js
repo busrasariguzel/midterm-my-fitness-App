@@ -35,10 +35,10 @@ router.post('/register', userValidation, register);
 router.put('/update-profile', (req,res)=>{
   userController.updateProfile(req.body,req.user._id)
   .then((user)=> {
-    return res.redirect('/api/users/profile')
+    return res.redirect('/users/profile')
   }).catch((err)=> {
     console.log(err)
-    return res.redirect('/api/users/update-profile')
+    return res.redirect('/users/update-profile')
   })
   });
 
@@ -52,9 +52,9 @@ router.get('/update-profile', (req,res)=>{
 router.put('/update-password',(req,res)=>{
     userController.updatePassword(req.body, req.user._id)
     .then((user)=>{
-      return res.redirect('/api/users/profile');
+      return res.redirect('/users/profile');
     }).catch(err=>{
-      return res.redirect('/api/users/update-profile')
+      return res.redirect('/users/update-profile')
     });
 });
 
