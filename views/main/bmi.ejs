@@ -12,18 +12,28 @@
          <link rel="stylesheet" type="text/css" href="/stylesheet/style3.css" />
 </head>
 <body>
+        <style>
+                body {
+                  background-image: url('/img/fitness.jpg');
+                  height: 100%;
+                }
+                </style>
  <div class="container">
  <!---heading---->
      <header class="heading"> CALCULATE YOUR BMI</header><hr></hr>
-	<!---Form starting----> 
+
+    <!---Form starting----> 
+    <form role="form" method="POST" action="/auth/bmi">
 	<div class="row ">
 	 <!--- For Name---->
-         <div class="col-sm-12">
+         <div 
+         
+         class="col-sm-12">
              <div class="row">
 			     <div class="col-xs-4">
-          	         <label class="firstname">First Name :</label> </div>
+          	         <label class="firstname">Weight :</label> </div>
 		         <div class="col-xs-8">
-		             <input type="text" name="fname" id="fname" placeholder="Enter your First Name" class="form-control ">
+		             <input type="text" name="weight" id="fname" placeholder="Please enter your weight in lbs" class="form-control ">
              </div>
 		      </div>
 		 </div>
@@ -32,9 +42,9 @@
          <div class="col-sm-12">
 		     <div class="row">
 			     <div class="col-xs-4">
-                     <label class="lastname">Last Name :</label></div>
+                     <label class="lastname">Height :</label></div>
 				<div class ="col-xs-8">	 
-		             <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" class="form-control last">
+		             <input type="text" name="height" id="lname" placeholder="Please enter your height in feet" class="form-control last">
                 </div>
 		     </div>
 		 </div>
@@ -42,9 +52,9 @@
 		 <div class="col-sm-12">
 		     <div class="row">
 			     <div class="col-xs-4">
-		             <label class="mail" >Email :</label></div>
+		             <label class="lastname">Age :</label></div>
 			     <div class="col-xs-8"	>	 
-			          <input type="email" name="email"  id="email"placeholder="Enter your email" class="form-control" >
+			          <input type="text" name="email"  placeholder="Please enter your age" class="form-control" >
 		         </div>
 		     </div>
 		 </div>
@@ -52,9 +62,9 @@
           <div class="col-sm-12">
 		         <div class="row">
 				     <div class="col-xs-4">
-		 	              <label class="pass">Password :</label></div>
+		 	              <label class="pass">Exercise :</label></div>
 				  <div class="col-xs-8">
-			             <input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control">
+			             <input type="password" name="password" id="password" placeholder="Please enter number of your weekly exercise" class="form-control">
 				 </div>
           </div>
 		  </div>
@@ -76,45 +86,32 @@
 			
 		  	 </div>
 		     <div class="col-sm-12">
-		         <div class="btn btn-warning">Submit</div>
+                 <div>
+                 <button type="submit" class="btn btn-warning">Calculate my BMI</button>
+                 <h4>YOUR BMI IS: <%= bmi %> </h4>
+                 
+                 </div>
 		   </div>
 		 </div>
-	 </div>	 
-		 		 
-		 
-</div>
-
-</body>		
-</html>
-<!-- <!DOCTYPE html>
-<html lang="en">
-    <head>
-            
-    </head>
-    <body>
-           <header>
-               \
-           </header>
-        <h1>thank you for logging in</h1>
-        <h1>calculate your BMI</h1>
-        <form role="form" method="POST" action="/auth/bmi">
-        <input  placeholder="please enter your weight lbs" type='text' id="weight" name="weight"><br>
-        <input   placeholder="please enter your height in ft" type='text' id="height" name="height"><br>
-        <button type="submit">Calculate my BMI</button>
-        </form>
-        <p>YOUR BMI IS: <%= bmi %> </p>
+     </div>	 
+     
+  
+<div id="result">
+        <% if (bmi === NaN) { %>
+            <p>  </p>
+        <% } %>
         <% if (bmi<18.5) { %>
         <h2 style=color:red;>underweight</h2>
         
-                <h4>Health consequences of a high BMI?</h4>
-              <p> There’s a lot of focus in the medical world on the health effects of being overweight, but what about the effects of being underweight? There are certain health risks associated with being underweight or having poor nutrition.
+                <h4>Health consequences of a high BMI</h4>
+                <p> There’s a lot of focus in the medical world on the health effects of being overweight, but what about the effects of being underweight? There are certain health risks associated with being underweight or having poor nutrition.
                 These risks include:
                 <ul>
-                <li>malnutrition, vitamin deficiencies, or anemia</
-                <li>osteoporosis from too little vitamin D and calcium</
-                <li>decreased immune function</
-                <li>increased risk for complications from surgery</
-                <li>growth and development issues, especially in children and teenagers </
+                <li>malnutrition, vitamin deficiencies, or anemia</li>
+                <li>osteoporosis from too little vitamin D and calcium</li>
+                <li>decreased immune function</li>
+                <li>increased risk for complications from surgery</li>
+                <li>growth and development issues, especially in children and teenagers </li>
                 </ul>
             </p>
         <% } %> <% if (bmi>18.5 && bmi<24.9) { %>
@@ -124,7 +121,7 @@
         <% } %> <% if (bmi>30 && bmi<40) { %>
         <h2 style=color:red;> obese </h2>
         
-            <h4>Health consequences of a high BMI?</h4>
+            <h4>Health consequences of a high BMI</h4>
             <p>   When it comes to the amount of body fat you carry, the stakes are high. Obesity and high levels of body fat carry a variety of health consequences, and can affect your overall health and quality of life. They include:
                 <ul>
                 <li>High blood pressure</li>
@@ -142,12 +139,30 @@
                 </ul>
             </p>
         <% } %> <% if (bmi>40 ) { %>
-        <p>Extreme obesity</p>
+
+        <h2 style=color:red;> Extreme obesity </h2>
+        
+            <h4>Health consequences of a high BMI</h4>
+            <p>   When it comes to the amount of body fat you carry, the stakes are high. Obesity and high levels of body fat carry a variety of health consequences, and can affect your overall health and quality of life. They include:
+                <ul>
+                <li>High blood pressure</li>
+                <li>High cholesterol levels</li>
+                <li>Diabetes</li>
+                <li>Heart disease</li>
+                <li>Stroke</li>
+                <li>Gallbladder disease</li>
+                <li>Osteoarthritis</li>
+                <li>Sleep apnea</li>
+                <li>Chronic inflammation and pain</li>
+                <li>Certain types of cancer</li>
+                <li>Mental disorders such as anxiety and depression</li>
+                <li>Increased risk of death</li>
+                </ul>
+            </p>
         <% } %> 
 
-        <a href="/auth/track">track your calories?</a>
-        <a href=""> track your exercise?</a>
-        </form>
-        \
-    </body>
-</html> -->
+        </div>
+    </form>
+</div>
+</body>		
+</html>
