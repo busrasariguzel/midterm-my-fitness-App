@@ -19,7 +19,9 @@ Fitness App is designed to help people to keep track of their weight and health.
 
 You can easily contribute to Busra's fitness app.
 Al you have to do is:
-1. For this
+1. Fork this repo.
+2. Clone it to your computer
+3. Edit and contribute as you want!
 ---
 
 ## `API Reference`
@@ -29,11 +31,30 @@ You can find the API reference link below:
 https://wger.de/api/v2/exerciseimage/?format=json
 
 ---
+## `How to Install?` 
+
+### `Clone`
+You can clone my repository as below:
+
+```
+git clone https://github.com/busrasariguzel/midterm-my-fitness-App.git
+```
+
+### `Setup`
+
+The setup instructions are:
+```
+npm install 
+cd midterm-my-fitness-App.git
+code .
+```
+
 ## `How to use?`
-Here are the steps to use the app:
-1. git clone
-2. cd rp
-3. 
+After you install the app, you can go to your browser and start using Busra's Fitness App!
+Here are the steps:
+1. You can put http://localhost:3000/home to your browser to enjoy desktop version of the app!
+2. The essential routes are written below to help you use the app smoothly and easily.
+
 
 ---
 ## `Routes`
