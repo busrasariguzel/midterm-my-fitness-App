@@ -95,13 +95,13 @@
 		   </div>
 		 </div>
      </div>	 
-     
+     <% console.log(bmi) %> 
   
 <div id="result">
-        <% if (bmi === NaN) { %>
+        <% if (bmi === undefined) { %>
             <p>  </p>
         <% } %>
-        <% if (bmi<18.5) { %>
+        <% if (bmi<18.5 && bmi !== null) { %>
         <h2 style=color:red;>underweight</h2>
         
                 <h4>Health consequences of a high BMI</h4>

@@ -19,20 +19,16 @@ let fetch = require('node-fetch')
 router.post('/workout', (req,res,next)=>{
     fetch('https://wger.de/api/v2/exerciseimage/?format=json')
     .then(res=>res.json())
-    // .then(results => {
-    // results.map(({images}) => {
     .then(({results})=>{ return results.forEach((obj)=> {
             console.log(obj.image)
         
     // let image = images
-    
     // console.log(images)
     
     const newWorkout = new Workout();
     newWorkout.name = faker.lorem.words();
     newWorkout.duration = '30 mins'
     newWorkout.image.picture = obj.image;
-    // newWorkout.image.picture = faker.image.sports()
     newWorkout.description = faker.lorem.sentence();
     
     newWorkout.save()

@@ -5,6 +5,7 @@ const Bmi = require('./models/Bmi');
 const bmiValidation = require('./bmiValidation')
 
 
+
 router.get('/track', (req,res)=>{
     return res.render('main/track')
     })
