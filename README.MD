@@ -12,7 +12,28 @@ Fitness App is designed to help people to keep track of their weight and health.
 ---
 
 ## `Screenshots`
-![alt text]()
+Here are some examples of my code from the app:
+
+BMI get and post routes:
+
+![bmi code](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.43.00&#32;PM.png)
+
+Workout Schema:
+
+![workout schema](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.46.55&#32;PM.png)
+
+Update profile routes:
+
+![update profile routes](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.47.12&#32;PM.png)
+
+Ejs partials/header:
+
+![ejs header](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.47.29&#32;PM.png)
+
+Calories Schema:
+
+![calories model](/public/img/Screen&#32;Shot&#32;2020-04-01&#32;at&#32;12.47.46&#32;PM.png)
+
 
 ---
 ## `Contributing`
@@ -33,21 +54,25 @@ https://wger.de/api/v2/exerciseimage/?format=json
 ---
 ## `How to Install?` 
 
-### `Clone`
+#### `Clone`
 You can clone my repository as below:
 
 ```
 git clone https://github.com/busrasariguzel/midterm-my-fitness-App.git
 ```
 
-### `Setup`
+
+
+#### `Setup`
 
 The setup instructions are:
+
 ```
 npm install 
 cd midterm-my-fitness-App.git
 code .
 ```
+---
 
 ## `How to use?`
 After you install the app, you can go to your browser and start using Busra's Fitness App!
@@ -90,7 +115,9 @@ You can find important routes below:
 - /calories
 
 ---
-## 'Needed Dependencies"
+
+## `Needed Dependencies`
+
 Here is a list of dependencies to run the app.
 * connect
 * bcryptjs
@@ -113,6 +140,7 @@ Here is a list of dependencies to run the app.
 * passport-local
 
 ---
+
 ## `License`
 
 Busra Tech ©
