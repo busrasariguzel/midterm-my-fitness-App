@@ -6,13 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+          
             <%- include ../partials/header2 %>
-        <h3>Single Workout page</h3>
-        <p>Workout name: <%= workout.name %> </p>
-        <p> <%= workout.duration %> </p>
-        <p> <%= workout.description %> </p>
+        <h1>Check out the workout details!</h1>
+        <h4>Workout name: <%= workout.name %> </h4>
+        <h4> Workout duration: <%= workout.duration %> </h4>
+        <h4> Workout description: <%= workout.description %> </h4>
         <img
-            style="height:140px; width: 160px"
+            style="height:400px; width: 500px"
             src="<%=workout.image.picture%>"
             />
     </body>

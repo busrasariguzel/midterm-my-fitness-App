@@ -33,7 +33,7 @@ router.post('/workout', (req,res,next)=>{
     newWorkout.duration = '30 mins'
     newWorkout.image.picture = obj.image;
     // newWorkout.image.picture = faker.image.sports()
-    newWorkout.description = faker.lorem.lines();
+    newWorkout.description = faker.lorem.sentence();
     
     newWorkout.save()
     })

@@ -37,6 +37,9 @@ router.get('/contacts', (req,res)=>{
 router.get('/signup', (req,res)=>{
     return res.render('main/signup')
 })
+router.get('/gallery', (req,res)=>{
+    return res.render('main/gallery')
+})
 
 router.get('/logout', (req,res)=>{
     req.logout()
