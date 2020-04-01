@@ -4,7 +4,7 @@ const faker = require('faker')
 const workoutController =require('./controllers/workoutController')
 const {addWorkout
     } = require('./controllers/workoutController')
-
+let fetch = require('node-fetch')
 
 
     // router.post('/track', addWorkout)
@@ -17,15 +17,27 @@ const {addWorkout
 })
 
 router.post('/workout', (req,res,next)=>{
+    fetch('https://wger.de/api/v2/exerciseimage/?format=json')
+    .then(res=>res.json())
+    // .then(results => {
+    // results.map(({images}) => {
+    .then(({results})=>{ return results.forEach((obj)=> {
+            console.log(obj.image)
+        
+    // let image = images
+    
+    // console.log(images)
     
     const newWorkout = new Workout();
     newWorkout.name = faker.lorem.words();
     newWorkout.duration = '30 mins'
-    newWorkout.image.picture = faker.image.sports();
+    newWorkout.image.picture = obj.image;
+    // newWorkout.image.picture = faker.image.sports()
     newWorkout.description = faker.lorem.lines();
     
     newWorkout.save()
-.then(workout => {
+    })
+}).then(workout => {
         console.log(workout)
         res.status(200).json({message: 'Workout Added', workout: workout});
         return res.redirect('/track/workout', {workout})
@@ -33,7 +45,7 @@ router.post('/workout', (req,res,next)=>{
     }).catch(err=>{
         
         return res.status(400).json({message:'error', err})
-});
+})
     }
 );
 

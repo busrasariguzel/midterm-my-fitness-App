@@ -1,0 +1,187 @@
+{
+    "count": 204,
+    "next": "https://wger.de/api/v2/exerciseimage/?format=json&page=3",
+    "previous": "https://wger.de/api/v2/exerciseimage/?format=json",
+    "results": [
+    {
+    "id": 21,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/26/Biceps-curl-1.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 26
+    },
+    {
+    "id": 22,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/26/Biceps-curl-2.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 26
+    },
+    {
+    "id": 23,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/81/Biceps-curl-1.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 81
+    },
+    {
+    "id": 24,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/81/Biceps-curl-2.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 81
+    },
+    {
+    "id": 25,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/24/Bicep-curls-1.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 24
+    },
+    {
+    "id": 26,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/24/Bicep-curls-2.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 24
+    },
+    {
+    "id": 27,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/74/Bicep-curls-1.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 74
+    },
+    {
+    "id": 28,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/74/Bicep-curls-2.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 74
+    },
+    {
+    "id": 29,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/29/Tricep-dips-2-1.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 29
+    },
+    {
+    "id": 30,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/29/Tricep-dips-2-2.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 29
+    },
+    {
+    "id": 31,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/82/Tricep-dips-2-1.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 82
+    },
+    {
+    "id": 32,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/82/Tricep-dips-2-2.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 82
+    },
+    {
+    "id": 33,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/68/Bench-dips-1.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 68
+    },
+    {
+    "id": 34,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/68/Bench-dips-2.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 68
+    },
+    {
+    "id": 35,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/83/Bench-dips-1.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 83
+    },
+    {
+    "id": 36,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/83/Bench-dips-2.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 83
+    },
+    {
+    "id": 37,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/8/Dumbbell-shrugs-2.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 8
+    },
+    {
+    "id": 38,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/8/Dumbbell-shrugs-1.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 8
+    },
+    {
+    "id": 39,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/151/Dumbbell-shrugs-2.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 151
+    },
+    {
+    "id": 40,
+    "license_author": "Everkinetic",
+    "status": "2",
+    "image": "https://wger.de/media/exercise-images/151/Dumbbell-shrugs-1.png",
+    "is_main": true,
+    "license": 1,
+    "exercise": 151
+    }
+    ]
+    }

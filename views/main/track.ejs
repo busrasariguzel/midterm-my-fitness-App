@@ -9,10 +9,10 @@
     <body>
             <%- include ../partials/header2 %>
         <style>
-            body {
-                background-image: url('/img/fitness2.jpg');
+            /* body {
+                background-image: url('/img/fitness10.jpg');
                 height: 100%;
-              }
+              } */
         </style>
         <h1>Welcome to our fitness page.</h1>
         <h4>Best way to keep track of your weight is to exercise!<br> 
@@ -26,7 +26,7 @@
             <p><%= workout[i].duration %> </p>
             <p><%= workout[i].description %> </p>
             <img
-            style="height:140px; width: 160px"
+            style="height:250px; width: 300px"
             src="<%=workout[i].image.picture%>"
             />
             <a href="/track/single-workout/<%=workout[i]._id%>">Checkout the workout!</a>
