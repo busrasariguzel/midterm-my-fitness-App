@@ -4,7 +4,7 @@
         <title>Project for Colin</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./style.css" rel="stylesheet" type="text/css">
+        <!-- <link href="./style.css" rel="stylesheet" type="text/css"> -->
     </head>
     <body>
             <style>
@@ -18,7 +18,7 @@
 <%- include ../partials/header2 %>
             <form role="form" method="POST" action="/users/update-profile?_method=PUT">
                 <fieldset>
-                    <img src="<%= user.profile.picture %> " alt="profile"/>
+                    <img src="<%= user.profile.picture %>" alt="profile"/>
                     <div >
                         <br>
                         <label for="name" >Name:</label>

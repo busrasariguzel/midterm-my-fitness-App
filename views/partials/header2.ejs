@@ -2,19 +2,23 @@
         <style>
                 header{
                     text-align: right;
+                    
                 }
         </style>
         <% if (!user) { %>
-        <h4><a style="color:orange" href="/users/register">Register</a></h4>
-        <h4><a style="color:orange" href="/users/login">Login</a></h4>
-        <h4><a style="color:orange" href="/home">Home</a></h4>
-    
+        <h4><a style="color:white" href="/users/register">Register</a></h4>
+        <h4><a style="color:white" href="/users/login">Login</a></h4>
+        <h4><a style="color:white" href="/home">Home</a></h4>
+        
     <% }else{ %>
         <div>
-    <h3>Hi, <a  style="color:orange" href="/users/profile" >
+    <h3>Hi, <a  style="color:white" href="/users/profile" >
     <%= user.profile.name.toUpperCase() %></a></h3> 
-    <h3><a style="color:orange" href="/home">Home</a></h3>
-    <h3><a style="color:orange" href="/logout">logout</a></h3>
+    <h3><a style="color:white" href="/home">Home</a></h3>
+    <h3><a style="color:white" href="/logout">logout</a></h3>
+    <h4><a style="color:white" href=/calories>Calorie Tracker</a></h4>
+    <h4><a style="color:white" href=/auth/bmi>BMI Calculator</a></h4>
+    
     </div>
     <% } %>
     

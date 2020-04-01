@@ -4,9 +4,9 @@ const Calories = require('./models/Calories');
 
 
 router.get('/', (req,res)=>{
-    Calories.find({}).then(calories =>{
-        return res.render('main/calories',{ calories })
-    })
+    // Calories.find({}).then(calories =>{
+        return res.render('main/calories' , {calories:null})
+    // })
 })
 
 router.post('/', (req,res,next)=>{
@@ -22,14 +22,16 @@ newCalories.save()
 
 // const totalCalories = newCalories+newCalories.breakfast
 .then(calories => {
+    console.log(calories)
     
-    res.status(200).json();
-    return res.redirect('/calories', {calories:calories})
+    return res.render('main/calories', {calories:calories})
     
 }).catch(err=>{
     
     return res.status(400).json({message:'error', err})
-})
+}).catch(err=>{
+    return next(err);
+    })
 }
 );
 

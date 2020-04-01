@@ -10,27 +10,28 @@
             <%- include ../partials/header2 %>
         <style>
             body {
-                background-image: url('/img/fitness10.jpg');
+                text-align: center;
                 height: 100%;
-                color:black
+                color:black;
+                background-color:burlywood;
               }
         </style>
-        <h1>Welcome to our fitness page.</h1>
-        <h4>Best way to keep track of your weight is to exercise!<br> 
+        <h1>Workouts for an amazing body</h1>
+        <h3>Best way to keep track of your weight is to exercise.<br> 
             Checkout the workouts we have and join the movement! <br>
-            You are only one decision away from having amazing abs!</h4>
-            <a href=/calories>Track calories</a>
+            You are only one decision away from having amazing abs!</h3>
+            
 <div id="workout">
         <% for( let i = 0; i < workout.length; i++ ) { %>
             
-            <p><%= workout[i].name %> </p>
-            <p><%= workout[i].duration %> </p>
-            <p><%= workout[i].description %> </p>
+            <h3> Workout Name : <%= workout[i].name %> </h3>
+            <h3>Workout Duration : <%= workout[i].duration %> </h3>
+            <h3>Workout Description: <%= workout[i].description %> </h3>
             <img
-            style="height:250px; width: 300px"
+            style="height:300px; width: 350px"
             src="<%=workout[i].image.picture%>"
-            />
-            <a href="/track/single-workout/<%=workout[i]._id%>">Checkout the workout!</a>
+            /><br>
+            <a href="/track/single-workout/<%=workout[i]._id%>">Click for the workout details!</a>
         <% } %>
 
 </div>
