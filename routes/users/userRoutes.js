@@ -58,9 +58,16 @@ router.put('/update-password',(req,res)=>{
     });
 });
 
-router.get('/profile', (req,res)=>{
-  return res.render('main/profile')
-})
+// router.get('/profile', (req,res)=>{
+//   return res.render('main/profile')
+// })
 
+router.get('/profile', (req,res,next)=> {
+  if(req.isAuthenticated){
+    return res.render('main/profile')
+  } else{
+    return res.send('Unauthorized')
+  }
+})
 
 module.exports = router;

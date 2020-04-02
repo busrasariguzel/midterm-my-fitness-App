@@ -22,6 +22,12 @@
 </head>
 <body >
         <%- include ../partials/header2 %>
+        <style>
+                body {
+                   
+                    background-color: brown
+                    }
+            </style>
         <div class="container">
                 <div style="text-align:center"><img class="mt-2"src="https://i.ibb.co/rxKLQ4S/19-1-User-512.png" alt="photo" style="width:20%"></div>
                 <div class="d-flex justify-content-center h-100">
@@ -31,18 +37,19 @@
                         </div>
                         <div class="card-body">
                             <form role="form" method="POST" action="/users/register">
-                                <div class="input-group form-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class='fas fa-user-graduate ml-2' style='font-size:23px'></i></span>
-                                        <input type="text" class="form-control" placeholder="Email" name="email" id="tbEmail" required>
-                                    </div>         
-                                </div>
+                                
                                 <div class="input-group form-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class='fa fa-key ml-2' style='font-size:22px'></i></span>
                                         <input type="text" class="form-control" placeholder="Name" name="name" id="tbName" required>
                                     </div>   
                                 </div>
+                                <div class="input-group form-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class='fas fa-user-graduate ml-2' style='font-size:23px'></i></span>
+                                            <input type="text" class="form-control" placeholder="Email" name="email" id="tbEmail" required>
+                                        </div>         
+                                    </div>
                                 <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class='fa fa-key ml-2' style='font-size:22px'></i></span>
@@ -62,8 +69,7 @@
                             <!-- <button class="btn login_btn text-light" role="button" id="btnKayitOl" >Sign Up</button> -->
                             </div>
                             <div class="d-flex justify-content-center links my-1">
-                             <button class="btn login_btn text-light" role="button" id="btnSifreUnuttum" data-toggle="modal" data-target="#openModalID">
-                                Forgot your password?</button>
+                             
                              
                              <div class="modal fade " tabindex="-1" role="dialog" id="openModalID" aria-labelledby="ModalTitle" aria="true" data-backdrop="false">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -430,32 +436,3 @@
     </script>
 </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Project for Colin</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-            <form role="form" method="POST" action="/users/register" class="register-form">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <label for="name">Name</label>
-                        <input type="text" name="name">
-                    </div>
-                    <div class="col-lg-6">
-                        <label for="email">Your email address</label>
-                        <input type="text" name="email">
-                    </div>
-                    <div class="col-lg-6">
-                        <label for="password">password</label>
-                        <input type="password" name="password">
-                    </div>
-                    
-                </div>
-                <button type="submit" class="register-btn">Get Started</button>
-            </form>
-    </body>
-</html> -->

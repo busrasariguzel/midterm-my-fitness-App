@@ -22,6 +22,12 @@
 </head>
 <body >
         <%- include ../partials/header2 %>
+        <style>
+                body {
+                   
+                    background-color: brown
+                    }
+            </style>
         <div class="container">
                 <div style="text-align:center"><img class="mt-2"src="https://i.ibb.co/rxKLQ4S/19-1-User-512.png" alt="photo" style="width:20%"></div>
                 <div class="d-flex justify-content-center h-100">
@@ -30,40 +36,46 @@
                             <h2 class="text-center text-light">Login</h2>
                         </div>
                         <div class="card-body">
-                            <form role="form" method="POST" action="/users/login" class="needs-validation">
-                                <div class="input-group form-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class='fas fa-user-graduate ml-2' style='font-size:23px'></i></span>
-                                        <input type="text" class="form-control" placeholder="Email" name="email"id="tbEmail" required>
-                                    </div>         
-                                </div>
+                            <form role="form" method="POST" action="/users/login">
+                                
                                 <div class="input-group form-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class='fa fa-key ml-2' style='font-size:22px'></i></span>
-                                        <input type="password" class="form-control" placeholder="Password" name='password' id="tbSifre" required>
+                                        <input type="text" class="form-control" placeholder="Name" name="name" id="tbName" required>
                                     </div>   
                                 </div>
+                                <div class="input-group form-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class='fas fa-user-graduate ml-2' style='font-size:23px'></i></span>
+                                            <input type="text" class="form-control" placeholder="Email" name="email" id="tbEmail" required>
+                                        </div>         
+                                    </div>
+                                <div class="input-group form-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class='fa fa-key ml-2' style='font-size:22px'></i></span>
+                                            <input type="password" class="form-control" name="password" placeholder="Password" id="tbSifre" required>
+                                        </div>   
+                                    </div>
                                 <div class="row align-items-center remember">
                                     <input type="checkbox">Remember me
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" value="Login" class="btn float-right login_btn text-light" id="btnGiris">    
+                                    <input type="submit" value="Sign in" class="btn float-right login_btn text-light" id="btnGiris">    
                                 </div>
                             </form>
                         </div>
                         <div class="card-footer">
                             <div class="d-flex justify-content-center links">
-                            <button class="btn login_btn text-light" role="button" href="/users/register"   id="btnKayitOl" >Sign Up</button>
+                            <!-- <button class="btn login_btn text-light" role="button" id="btnKayitOl" >Sign Up</button> -->
                             </div>
                             <div class="d-flex justify-content-center links my-1">
-                             <button class="btn login_btn text-light" role="button" id="btnSifreUnuttum" data-toggle="modal" data-target="#openModalID">
-                                Forgot your password?</button>
+                             
                              
                              <div class="modal fade " tabindex="-1" role="dialog" id="openModalID" aria-labelledby="ModalTitle" aria="true" data-backdrop="false">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h3 class="modal-title" id="ModalTitle2">Şifreni Sıfırla</h3>
+                                            <h3 class="modal-title" id="ModalTitle2">Reset your password</h3>
                                             <button type="button" class="close times" data-dismiss="modal" aria-label="Kapatma işlemi">
                                                 <span aria-hidden="true">×</span>
                                             </button>
@@ -82,7 +94,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <input type="submit" value="Gönder" class="btn login_btn text-light">
+                                                    <input type="submit" value="Send" class="btn login_btn text-light">
                                                 </div>
                                             </form>
                                         </div>
