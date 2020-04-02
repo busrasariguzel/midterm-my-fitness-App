@@ -65,7 +65,7 @@
 				     <div class="col-xs-4">
 		 	              <label class="pass">Exercise :</label></div>
 				  <div class="col-xs-8">
-			             <input type="password" name="password" id="password" placeholder="Please enter number of your weekly exercise" class="form-control">
+			             <input type="text" name="password" id="password" placeholder="Please enter number of your weekly exercise" class="form-control">
 				 </div>
           </div>
 		  </div>
@@ -104,7 +104,7 @@
         <% if (bmi<18.5 && bmi !== null) { %>
         <h2 style=color:red;>underweight</h2>
         
-                <h4>Health consequences of a high BMI</h4>
+                <h4>Health consequences of a low BMI</h4>
                 <p> There’s a lot of focus in the medical world on the health effects of being overweight, but what about the effects of being underweight? There are certain health risks associated with being underweight or having poor nutrition.
                 These risks include:
                 <ul>
@@ -119,6 +119,23 @@
         <h2 style=color:blue;>healthy</h2>
         <% } %> <% if (bmi>25 && bmi<30) { %>
         <h2 style=color:red;>overweight</h2>
+        <h4>Health consequences of a high BMI</h4>
+            <p>   When it comes to the amount of body fat you carry, the stakes are high. Obesity and high levels of body fat carry a variety of health consequences, and can affect your overall health and quality of life. They include:
+                <ul>
+                <li>High blood pressure</li>
+                <li>High cholesterol levels</li>
+                <li>Diabetes</li>
+                <li>Heart disease</li>
+                <li>Stroke</li>
+                <li>Gallbladder disease</li>
+                <li>Osteoarthritis</li>
+                <li>Sleep apnea</li>
+                <li>Chronic inflammation and pain</li>
+                <li>Certain types of cancer</li>
+                <li>Mental disorders such as anxiety and depression</li>
+                <li>Increased risk of death</li>
+                </ul>
+            </p>
         <% } %> <% if (bmi>30 && bmi<40) { %>
         <h2 style=color:red;> obese </h2>
         
@@ -161,7 +178,9 @@
                 </ul>
             </p>
         <% } %> 
-<h4><a href=/track/workout>Want to lose weight? Track your calories</a></h4>
+<h4><a href=/track/workout>Want to lose weight? Checkout our workouts!</a></h4>
+<p>or</p>
+<h4><a href=/track/workout> Track your calories</a></h4>
         </div>
     </form>
 </div>

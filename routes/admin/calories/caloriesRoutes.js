@@ -20,7 +20,7 @@ newCalories.burned= req.body.burned;
 newCalories.total = Number(req.body.breakfast)+Number(req.body.lunch)+Number(req.body.dinner)+Number(req.body.snack)-Number(req.body.burned)
 newCalories.save()
 
-// const totalCalories = newCalories+newCalories.breakfast
+
 .then(calories => {
     console.log(calories)
     

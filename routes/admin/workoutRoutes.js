@@ -20,10 +20,7 @@ router.post('/workout', (req,res,next)=>{
     fetch('https://wger.de/api/v2/exerciseimage/?format=json')
     .then(res=>res.json())
     .then(({results})=>{ return results.forEach((obj)=> {
-            console.log(obj.image)
-        
-    // let image = images
-    // console.log(images)
+    // console.log(obj.image)
     
     const newWorkout = new Workout();
     newWorkout.name = faker.lorem.words();
