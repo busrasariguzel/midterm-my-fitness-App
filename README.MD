@@ -141,6 +141,11 @@ Here is a list of dependencies to run the app.
 
 ---
 
+## `Try It Live`
+
+You can try out the app by using this link:
+https://busrasariguzel-fitness-app.herokuapp.com/
+
 ## `License`
 
 Busra Tech ©
